@@ -1,0 +1,15 @@
+<div>
+<h3 (click)="print()">albums colection</h3>
+<div class="row">
+  <!-- <select name="city-list" id="city" *ngFor="let ct of city | async">
+    <option value={{ct.name}}>{{ct.name}}</option> 
+    </select> -->
+  <div  class="col-sm-4" *ngFor="let album of albums | async">
+    <div class="card">
+      <div class="card-body">
+        <a routerLink="photos/{{album.id}}" class="btn btn-primary">{{album.title}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
